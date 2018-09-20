@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>tbertuzzi</Authors>
+    <Company>KBits</Company>
+    <Copyright>KBits</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
+    <PackageTags>xamarin xamarin.forms pinch zoom image</PackageTags>
+    <PackageReleaseNotes>Initial Version</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</RepositoryUrl>
+    <Description>Zoom in on the image with the pinch of your fingers</Description>
   </PropertyGroup>
 
   <ItemGroup>
