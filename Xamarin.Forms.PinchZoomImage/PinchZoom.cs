@@ -48,8 +48,8 @@ namespace Xamarin.Forms.PinchZoomImage
                 double targetX = xOffset - (originX * Content.Width) * (currentScale - startScale);
                 double targetY = yOffset - (originY * Content.Height) * (currentScale - startScale);
 
-                Content.TranslationX = Math.Min(0, Math.Max(targetX, -Content.Width * (currentScale - 1)));//  targetX.Clamp(-Content.Width * (currentScale - 1), 0);
-                Content.TranslationY = Math.Min(0, Math.Max(targetY, -Content.Height * (currentScale - 1)));  // targetY.Clamp(-Content.Height * (currentScale - 1), 0);
+                Content.TranslationX = Math.Min(0, Math.Max(targetX, -Content.Width * (currentScale - 1)));
+                Content.TranslationY = Math.Min(0, Math.Max(targetY, -Content.Height * (currentScale - 1)));
 
                 Content.Scale = currentScale;
             }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pinch="clr-namespace:Xamarin.Forms.PinchZoomImage;assembly=Xamarin.Forms.PinchZoomImage" 
+             xmlns:local="clr-namespace:PinchZoomImageSample" x:Class="PinchZoomImageSample.MainPage">
+   <StackLayout Padding="10,40,10,10" >
+        <ScrollView>           
+                <pinch:PinchZoom>
+                    <pinch:PinchZoom.Content>
+                        <Image Source="xxamarin.jpg" />
+                    </pinch:PinchZoom.Content>
+                </pinch:PinchZoom>          
+        </ScrollView>
+        
+        <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand"   Padding="15" >
+            <Label Text="This Is Pinch and Pan for any image" FontSize="20" VerticalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
