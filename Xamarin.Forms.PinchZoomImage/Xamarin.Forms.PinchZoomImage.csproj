@@ -12,6 +12,7 @@
     <PackageProjectUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</RepositoryUrl>
     <Description>Zoom in on the image with the pinch of your fingers</Description>
+    <PackageIconUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage/blob/master/Xamarin.Forms.PinchZoomImage/Resources/pinchZoomIcon.png?raw=true</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
