@@ -10,7 +10,7 @@ A simple way to zoom in and zoom out on your images with Xamarin.Forms.
 
 |Name|Info|
 | ------------------- | :------------------: |
-|Xamarin.Forms.PinchZoomImage|[![NuGet](https://img.shields.io/badge/nuget-1.0.0-blue.svg)](https://www.nuget.org/packages/Xamarin.Forms.PinchZoomImage/)|
+|Xamarin.Forms.PinchZoomImage|[![NuGet](https://buildstats.info/nuget/Xamarin.Forms.PinchZoomImage)](https://www.nuget.org/packages/Xamarin.Forms.PinchZoomImage/)|
 
  
  **Platform Support**
