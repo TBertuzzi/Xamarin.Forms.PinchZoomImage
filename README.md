@@ -41,3 +41,5 @@ Use with the image control
 
 The complete example can be downloaded here: 
 https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage/tree/master/PinchZoomImageSample
+
+Base on original docs : https://docs.microsoft.com/pt-br/xamarin/xamarin-forms/app-fundamentals/gestures/pinch
