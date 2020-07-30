@@ -1,4 +1,6 @@
-﻿using System;
+using System;
+using System.Threading.Tasks;
+
 namespace Xamarin.Forms.PinchZoomImage
 {
 
@@ -18,13 +20,18 @@ namespace Xamarin.Forms.PinchZoomImage
             var panGesture = new PanGestureRecognizer();
             panGesture.PanUpdated += OnPanUpdated;
             GestureRecognizers.Add(panGesture);
+
+            var tapGesture = new TapGestureRecognizer();
+            tapGesture.NumberOfTapsRequired = 2;
+            tapGesture.Tapped += DoubleTapped;
+            GestureRecognizers.Add(tapGesture);
         }
 
         private void PinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
         {
             if (e.Status == GestureStatus.Started)
             {
-     
+
                 startScale = Content.Scale;
                 Content.AnchorX = 0;
                 Content.AnchorY = 0;
@@ -130,6 +137,39 @@ namespace Xamarin.Forms.PinchZoomImage
                     break;
             }
         }
-    }
 
+        public async void DoubleTapped(object sender, EventArgs e)
+        {
+            double multiplicator = Math.Pow(2, 1.0 / 10.0);
+            startScale = Content.Scale;
+            Content.AnchorX = 0;
+            Content.AnchorY = 0;
+
+            for (int i=0; i<10; i++)
+            {
+                currentScale *= multiplicator;
+                double renderedX = Content.X + xOffset;
+                double deltaX = renderedX / Width;
+                double deltaWidth = Width / (Content.Width * startScale);
+                double originX = (0.5 - deltaX) * deltaWidth;
+
+                double renderedY = Content.Y + yOffset;
+                double deltaY = renderedY / Height;
+                double deltaHeight = Height / (Content.Height * startScale);
+                double originY = (0.5 - deltaY) * deltaHeight;
+
+                double targetX = xOffset - (originX * Content.Width) * (currentScale - startScale);
+                double targetY = yOffset - (originY * Content.Height) * (currentScale - startScale);
+
+                Content.TranslationX = Math.Min(0, Math.Max(targetX, -Content.Width * (currentScale - 1)));
+                Content.TranslationY = Math.Min(0, Math.Max(targetY, -Content.Height * (currentScale - 1)));
+
+                Content.Scale = currentScale;
+                await Task.Delay(10);
+            }
+
+            xOffset = Content.TranslationX;
+            yOffset = Content.TranslationY;
+        }
+    }
 }
