@@ -8,15 +8,15 @@
     <Copyright>KBits</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <PackageTags>xamarin xamarin.forms pinch zoom image</PackageTags>
-    <PackageReleaseNotes>Initial Version</PackageReleaseNotes>
+    <PackageReleaseNotes>Add double tap</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage</RepositoryUrl>
     <Description>Zoom in on the image with the pinch of your fingers</Description>
     <PackageIconUrl>https://github.com/TBertuzzi/Xamarin.Forms.PinchZoomImage/blob/master/Xamarin.Forms.PinchZoomImage/Resources/pinchZoomIcon.png?raw=true</PackageIconUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.0-pre1</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +24,6 @@
     <Compile Remove="DoubleExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.709238" />
   </ItemGroup>
 </Project>
